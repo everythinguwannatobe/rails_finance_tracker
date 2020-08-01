@@ -86,6 +86,10 @@ GEM
       warden (~> 1.2.3)
     devise-bootstrap-views (1.1.0)
     erubi (1.9.0)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     ffi (1.13.1)
     formatador (0.2.5)
     globalid (0.4.2)
@@ -103,8 +107,14 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    hashie (4.1.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    iex-ruby-client (1.1.2)
+      faraday (>= 0.9)
+      faraday_middleware
+      hashie
+      money_helper
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     listen (3.2.1)
@@ -128,7 +138,13 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    money (6.13.8)
+      i18n (>= 0.6.4, <= 2)
+    money_helper (1.0.2)
+      activesupport
+      money (~> 6.5)
     msgpack (1.3.3)
+    multipart-post (2.1.1)
     nenv (0.3.0)
     nio4r (2.5.2)
     nokogiri (1.10.10)
@@ -258,6 +274,7 @@ DEPENDENCIES
   devise-bootstrap-views (~> 1.0)
   guard
   guard-minitest
+  iex-ruby-client
   jbuilder (~> 2.7)
   listen (~> 3.2)
   minitest
