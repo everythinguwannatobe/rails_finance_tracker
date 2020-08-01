@@ -2,22 +2,25 @@
 
 <div class="pt-4">
   <h2><small>Search Stocks</small></h2>
-  <%= form_tag '#', method: :get do %>
+  <%= form_tag search_stock_path, method: :get do %>
     <div class="form-group row">
       <div class="col-sm-9 pr-0">
-        <%= text_field_tag :stock, params[:stock],
-                           placeholder: 'Stock ticker symbol',
-                           autofocus: true,
-                           class: 'form-control form-control-lg' %>
+        <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: true, class: "form-control form-control-lg" %>
       </div>
       <div class="col-sm-3 pl-0">
-        <%= button_tag type: :submit, class: 'btn btn-success' do %>
-        <%= fa_icon 'search 2x' %>
+        <%= button_tag type: :submit, class: "btn btn-success" do %>
+          <%= fa_icon 'search 2x' %>
         <% end %>
       </div>
     </div>
   <% end %>
-
 </div>
+<% if @stock %>
+  <div class="card card-header d-inline-block">
+    <strong>Symbol: </strong> <%= @stock.ticker %>
+    <strong>Name: </strong> <%= @stock.name %>
+    <strong>Price: </strong> <%= @stock.last_price %>
+  </div>
+<% end %>
 
 

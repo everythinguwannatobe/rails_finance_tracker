@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  get '/my_portfolio', to: 'users#my_portfolio'
+  get 'my_portfolio', to: 'users#my_portfolio'
+  get 'search_stock', to: 'stocks#search'
 end
