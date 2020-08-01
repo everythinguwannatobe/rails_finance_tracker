@@ -6,6 +6,7 @@ ruby '2.7.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'font-awesome-rails'
 gem 'iex-ruby-client'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'
