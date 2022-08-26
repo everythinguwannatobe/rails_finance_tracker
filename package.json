@@ -7,7 +7,7 @@
     "@rails/ujs": "^6.1.6",
     "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.6.2",
-    "jquery": "^3.6.0",
+    "jquery": "^3.6.1",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },
